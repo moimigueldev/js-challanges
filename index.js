@@ -6,8 +6,10 @@ const port = 3000;
 const firstReverse = require('./modules/first-reverse');
 const squareDigits = require('./modules/square-digits')
 const order = require('./modules/order');
+const spinWords = require('./modules/spin-words');
 
-
+console.log(spinWords('Hey fellow warriors'))
+console.log(spinWords('Welcome'))
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
