@@ -5,6 +5,8 @@ const port = 3000;
 //modules
 const firstReverse = require('./modules/first-reverse');
 const squareDigits = require('./modules/square-digits')
+const order = require('./modules/order');
+
 
 
 app.get('/', async (req, res) => {
