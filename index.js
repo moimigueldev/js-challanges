@@ -1,7 +1,11 @@
-let express = require('express');
-let app = express();
-let port = 3000;
+const express = require('express');
+const app = express();
+const port = 3000;
 
+//modules
+const firstReverse = require('./modules/first-reverse');
+
+console.log(firstReverse('hello World'))
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
