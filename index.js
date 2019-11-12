@@ -7,9 +7,11 @@ const firstReverse = require('./modules/first-reverse');
 const squareDigits = require('./modules/square-digits')
 const order = require('./modules/order');
 const spinWords = require('./modules/spin-words');
+const countBits = require('./modules/count-bits');
 
-console.log(spinWords('Hey fellow warriors'))
-console.log(spinWords('Welcome'))
+console.log(countBits(1234))
+console.log(countBits(7))
+
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
