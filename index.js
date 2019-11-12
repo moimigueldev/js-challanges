@@ -4,8 +4,8 @@ const port = 3000;
 
 //modules
 const firstReverse = require('./modules/first-reverse');
+const squareDigits = require('./modules/square-digits')
 
-console.log(firstReverse('hello World'))
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
