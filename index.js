@@ -10,9 +10,9 @@ const spinWords = require('./modules/spin-words');
 const countBits = require('./modules/count-bits');
 const persistentBugger = require('./modules/persistent-bugger');
 const duplicateCount = require('./modules/duplicate-count');
+const splitString = require('./modules/split-string');
 
-// console.log(duplicateCount('abcd'))
-console.log(duplicateCount('Indivisibilities'))
+console.log(splitString('abcde'));
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
