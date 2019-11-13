@@ -8,10 +8,11 @@ const squareDigits = require('./modules/square-digits')
 const order = require('./modules/order');
 const spinWords = require('./modules/spin-words');
 const countBits = require('./modules/count-bits');
+const persistentBugger = require('./modules/persistent-bugger');
+const duplicateCount = require('./modules/duplicate-count');
 
-console.log(countBits(1234))
-console.log(countBits(7))
-
+// console.log(duplicateCount('abcd'))
+console.log(duplicateCount('Indivisibilities'))
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
