@@ -13,10 +13,11 @@ const duplicateCount = require('./modules/duplicate-count');
 const splitString = require('./modules/split-string');
 const anagrams = require('./modules/anagrams');
 const uniqueInOrder = require('./modules/unique-in-order');
+const sortArray = require('./modules/sort-the-odd');
+const isValidIp = require('./modules/ip-validation');
 
-// console.log(uniqueInOrder('AAAABBBCCDAABBB'));
-console.log(uniqueInOrder('ABBCcAD'));
-// console.log(uniqueInOrder([1,2,2,3,3]));
+console.log(isValidIp('123.456.78.90'))
+
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
