@@ -8,9 +8,7 @@ const squareDigits = require('./modules/square-digits')
 const order = require('./modules/order');
 const spinWords = require('./modules/spin-words');
 const countBits = require('./modules/count-bits');
-
-console.log(countBits(1234))
-console.log(countBits(7))
+const persistentBugger = require('./modules/persistent-bugger');
 
 
 app.get('/', async (req, res) => {
