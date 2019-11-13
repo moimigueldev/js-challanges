@@ -8,15 +8,17 @@
 // solution('abcdef') // should return ['ab', 'cd', 'ef']
 
 function splitString(str) {
-    let results = str.split('');
-    let newArr = [];
+    // let results = str.split('');
+    // let newArr = [];
 
-    results.length % 2 == 0 ? console.log('even'): results.push('_');
+    // results.length % 2 == 0 ? console.log('even'): results.push('_');
     
-    results.some((item, index) => {
-        index % 2 == 0 ? newArr.push(`${item}${results[index + 1]}`): null;
-    })
-    return newArr;
+    // results.some((item, index) => {
+    //     index % 2 == 0 ? newArr.push(`${item}${results[index + 1]}`): null;
+    // })
+    // return newArr;
+
+    return (str.length % 2 ? str + '_' : str).match(/../g) // merges 2 items from an array
 }
 
 module.exports = splitString;
