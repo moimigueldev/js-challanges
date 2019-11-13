@@ -12,10 +12,11 @@ const persistentBugger = require('./modules/persistent-bugger');
 const duplicateCount = require('./modules/duplicate-count');
 const splitString = require('./modules/split-string');
 const anagrams = require('./modules/anagrams');
+const uniqueInOrder = require('./modules/unique-in-order');
 
-console.log(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']));
-// console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
-// console.log(anagrams('laser', ['lazing', 'lazy',  'lacer']));
+// console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+console.log(uniqueInOrder('ABBCcAD'));
+// console.log(uniqueInOrder([1,2,2,3,3]));
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
