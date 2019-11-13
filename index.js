@@ -11,8 +11,11 @@ const countBits = require('./modules/count-bits');
 const persistentBugger = require('./modules/persistent-bugger');
 const duplicateCount = require('./modules/duplicate-count');
 const splitString = require('./modules/split-string');
+const anagrams = require('./modules/anagrams');
 
-console.log(splitString('abcde'));
+console.log(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']));
+// console.log(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']));
+// console.log(anagrams('laser', ['lazing', 'lazy',  'lacer']));
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
