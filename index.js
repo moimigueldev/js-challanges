@@ -16,9 +16,10 @@ const uniqueInOrder = require('./modules/unique-in-order');
 const sortArray = require('./modules/sort-the-odd');
 const isValidIp = require('./modules/ip-validation');
 const toWeirdCase = require('./modules/weird-string-case');
+const iqTest = require('./modules/iq-test');
 
-console.log(toWeirdCase('String'))
-console.log(toWeirdCase('Weird string case'))
+console.log(iqTest('1 2 1 1'));
+// console.log(iqTest('2 4 7 8 10'));
 
 
 app.get('/', async (req, res) => {
