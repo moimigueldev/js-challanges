@@ -16,10 +16,11 @@ const uniqueInOrder = require('./modules/unique-in-order');
 const sortArray = require('./modules/sort-the-odd');
 const isValidIp = require('./modules/ip-validation');
 const toWeirdCase = require('./modules/weird-string-case');
-const iqTest = require('./modules/iq-test');
+const genHash = require('./modules/hashtag-generator');
 
-console.log(iqTest('1 2 1 1'));
-// console.log(iqTest('2 4 7 8 10'));
+console.log(genHash(' '));
+console.log(genHash(' Hello there thanks for trying my Kata'));
+
 
 
 app.get('/', async (req, res) => {
