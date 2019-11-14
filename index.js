@@ -15,8 +15,10 @@ const anagrams = require('./modules/anagrams');
 const uniqueInOrder = require('./modules/unique-in-order');
 const sortArray = require('./modules/sort-the-odd');
 const isValidIp = require('./modules/ip-validation');
+const toWeirdCase = require('./modules/weird-string-case');
 
-console.log(isValidIp('123.456.78.90'))
+console.log(toWeirdCase('String'))
+console.log(toWeirdCase('Weird string case'))
 
 
 app.get('/', async (req, res) => {
