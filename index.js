@@ -17,9 +17,11 @@ const sortArray = require('./modules/sort-the-odd');
 const isValidIp = require('./modules/ip-validation');
 const toWeirdCase = require('./modules/weird-string-case');
 const genHash = require('./modules/hashtag-generator');
+const domainName = require('./modules/domain-name');
 
-console.log(genHash(' '));
-console.log(genHash(' Hello there thanks for trying my Kata'));
+console.log(domainName('http://github.com/carbonfive/raygun'));
+console.log(domainName('http://www.zombie-bites.com'));
+
 
 
 
