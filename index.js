@@ -19,7 +19,8 @@ const toWeirdCase = require('./modules/weird-string-case');
 const genHash = require('./modules/hashtag-generator');
 const tongues = require('./modules/tongues');
 
-console.log(tongues('Ita dotf ni dyca nsaw ecc'));
+// console.log(tongues('Ita dotf ni dyca nsaw ecc'));
+console.log(tongues('Tywpadh (1234567890) etr bytlnyenoit, nsau hsiycr pins pa ytlsetfar!'));
 
 
 

@@ -21,136 +21,38 @@
 // For each string passed to the decode function return its translation.
 
 function tongues(code) {
-    const vowels = ['a', 'i', 'y', 'e', 'o', 'u'];
-    const consonants = [
-        'b', 'k', 'x', 'z', 
-        'n', 'h', 'd', 'c',
-        'w', 'g', 'p', 'v', 
-        'j', 'q', 't', 's', 
-        'r', 'l', 'm', 'f'];
-
+    const vowels = 'aiyeou';
+    const consonants = 'bkxznhdcwgpvjqtsrlmf'
+   
     const vowelsMoveCount = 3;
     const consonantsMoveCount = 10;
 
-        // console.log('is', 'u' === 'u')
-
-        // let newC = vowels[vowels.indexOf('o') + 3];
-        // console.log('new C', newC);
-        // console.log('length', vowels.length)
-        // console.log('a' === vowels[vowels.indexOf('a'));
-        // console.log('a' === vowels[vowels.indexOf('A')])
-    
-    code = code.split(' ').map((item, i, arr) => {
-        item = item.split('').map(ch => {
+    return code.split(' ').map(item => {
+        return item.split('').map(ch => {
             let c = ch.toLowerCase()
-    
-            if(vowels.includes(c)) {
-                // console.log('ch', isCapital, ch)
-                // console.log('returning', filterCha(c, vowels))
-
+            if (vowels.includes(c)) {
                 return filterCha(ch, vowels, vowelsMoveCount)
-
-                // if(vowels[vowels.indexOf(c)] === c) {
-                //     let newC = vowels[vowels.indexOf(c) + 3];
-                //     if(vowels.indexOf(c) + 3 > vowels.length - 1) {
-                //         let diff = (vowels.indexOf(c) + 3) - (vowels.length - 1);
-                //         // console.log( c, vowels[diff -1 ])
-                //         // console.log('differnce', isCapital, vowels[vowels.indexOf(c)])
-                //         return isCapital ? vowels[diff -1 ].toUpperCase():vowels[diff -1 ]
-
-                //     } else {
-                        
-
-                //         return isCapital ? vowels[vowels.indexOf(c) + 3].toUpperCase() : vowels[vowels.indexOf(c) + 3]
-
-                //         // console.log(c, vowels[vowels.indexOf(c) + 3])
-                //         // return vowels[vowels.indexOf(c) + 3]
-                //     }
-
-                //     // console.log('new C', c)
-                    
-                // } else {
-                //     // console.log('capital', c)
-                    
-                // }
-            } else if(consonants.includes(c)) {
-                
-
+            } else if (consonants.includes(c)) {
                 return filterCha(ch, consonants, consonantsMoveCount);
-
-                // if(consonants[consonants.indexOf(c)] === c) {
-                //     let newC = consonants[consonants.indexOf(c) + 10];
-
-                //     if(consonants.indexOf(c) + 10 > consonants.length - 1) {
-                //         // console.log('un', c)
-                //         let diff = (consonants.indexOf(c) + 10) - (consonants.length - 1);
-                //         // console.log( c, consonants[diff -1 ])
-                        
-                        
-                //         return consonants[diff -1 ];
-
-                //     } else {
-                //         // console.log(c, consonants[consonants.indexOf(c) + 10])
-                //         return consonants[consonants.indexOf(c) + 10]
-                //     }
-
-                //     // console.log('new C', c)
-                    
-                // } else {
-                //     // console.log('capital', c)
-                    
-                // }
-                
             } else {
-                console.log('not a ltter')
+                return c
             }
-        })//end of second map
-
-        return item.join('')
-
-        // console.log('item', item.join(''))
-     
+        }).join('');
     }).join(' ')//end of first map
-
-    // console.log('final', code)
-
-
-
-
-
-return code
 }
 
 
 function filterCha(ch, arr, numbertoMove) {
-    let isCapital = ch === arr[arr.indexOf(ch)] ? false: true;
+    const isCapital = ch === arr[arr.indexOf(ch)] ? false : true;
+    const c = ch.toLowerCase()
+
     
 
-    let c = ch.toLowerCase()
-
-    if(arr[arr.indexOf(c)] === c) {
-        let newC = arr[arr.indexOf(c) + numbertoMove];
-        if(arr.indexOf(c) + numbertoMove > arr.length - 1) {
-            let diff = (arr.indexOf(c) + numbertoMove) - (arr.length - 1);
-            // console.log( c, arr[diff -1 ])
-            // console.log('differnce', isCapital, arr[arr.indexOf(c)])
-            return isCapital ? arr[diff -1 ].toUpperCase():arr[diff -1 ]
-
-        } else {
-            
-
-            return isCapital ? arr[arr.indexOf(c) + numbertoMove].toUpperCase() : arr[arr.indexOf(c) + numbertoMove]
-
-            // console.log(c, arr[arr.indexOf(c) + 3])
-            // return arr[arr.indexOf(c) + 3]
-        }
-
-        // console.log('new C', c)
-        
-    } else {
-        // console.log('capital', c)
-        
-    }
+    if (arr.indexOf(c) + numbertoMove > arr.length - 1) {
+        let diff = (arr.indexOf(c) + numbertoMove) - (arr.length - 1);
+        return isCapital ? arr[diff - 1].toUpperCase() : arr[diff - 1]
+    } 
+        return isCapital ? arr[arr.indexOf(c) + numbertoMove].toUpperCase() : arr[arr.indexOf(c) + numbertoMove]
 }
 
 
