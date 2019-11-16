@@ -18,7 +18,10 @@ const isValidIp = require('./modules/ip-validation');
 const toWeirdCase = require('./modules/weird-string-case');
 const genHash = require('./modules/hashtag-generator');
 const tongues = require('./modules/tongues');
+const flatten = require('./modules/flatten');
 
+// console.log(flatten(1, [2, 3], 4, 5, [6, [7]]))
+console.log(flatten('a', ['b', 2], 3, null, [[4], ['c']]))
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
