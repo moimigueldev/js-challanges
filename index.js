@@ -17,10 +17,10 @@ const sortArray = require('./modules/sort-the-odd');
 const isValidIp = require('./modules/ip-validation');
 const toWeirdCase = require('./modules/weird-string-case');
 const genHash = require('./modules/hashtag-generator');
-const domainName = require('./modules/domain-name');
+const tongues = require('./modules/tongues');
 
-console.log(domainName('http://github.com/carbonfive/raygun'));
-console.log(domainName('http://www.zombie-bites.com'));
+console.log(tongues('Ita dotf ni dyca nsaw ecc'));
+
 
 
 
