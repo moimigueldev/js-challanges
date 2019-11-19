@@ -4,9 +4,9 @@ const port = 3000;
 
 //modules
 const firstReverse = require('./modules/first-reverse');
-const fib = require('./modules/fib');
+const divisibleCounts = require('./modules/count-divisibles');
 
-console.log(fib(20))
+console.log(divisibleCounts(6, 11, 2))
 
 
 
