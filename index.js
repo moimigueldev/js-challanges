@@ -6,7 +6,8 @@ const port = 3000;
 const firstReverse = require('./modules/first-reverse');
 const divisibleCounts = require('./modules/count-divisibles');
 
-console.log(divisibleCounts(6, 11, 2))
+// console.log(divisibleCounts(6, 11, 2))
+console.log(divisibleCounts(101, 9223372036854775806, 11))
 
 
 

@@ -6,30 +6,10 @@
 // there are three numbers divisible by 2 between 6 and 11: 6, 8, 10
 
 function divisibleCount(x, y, k) {
-
-   let arr = add(x, y)
-   
-   console.log('arr', arr)
-
-//     let arr = Array((y -x + 1 )).fill(add(x, y), 0, (y-x) + 1);
-
-//    console.log(arr)
-
- }
-
- function  add(x, y, arr = []) {
-     let count = x;
-     arr.push(x)
-     
-     console.log('current', count);
-
-     if (count === y ) {
-         return arr;
-     } else {
-        //  console.log('arr', arr)
-        //  arr.push(x)
-         return add(x += 1, y, arr)
-     }
+    return Math.floor(y/k) - Math.floor((x-1)/k)
+    
+  
+    
  }
 
  module.exports = divisibleCount;
@@ -50,3 +30,31 @@ function divisibleCount(x, y, k) {
 
     // return count;
 //  }
+
+
+// SOLUTION
+// function divisibleCount(x, y, k) {
+
+//     let arr = add(x, y)
+    
+//     return arr.filter(item => {
+//         return item % k === 0 ?  item : null
+//     }).length;
+//   }
+ 
+//   function  add(x, y, arr = []) {
+//       arr.push(x)
+ 
+//      return x === y ? arr : add(x += 1, y, arr)
+//   }
+
+// solution
+// function divisibleCount(x, y, k) {
+//     x -= 1;
+
+//    return [...Array(y - x).keys()].map(i => x += 1).filter(x => {
+//        return x % k === 0 ?  x : null
+//    }).length
+
+   
+// }
