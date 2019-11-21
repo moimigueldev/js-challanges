@@ -15,6 +15,7 @@ function duplicateCount(text) {
     });
     
     countarr.forEach((x) =>  counts[x] = (counts[x] || 0)+1);
+    console.log(counts)
     return Object.keys(counts).length;
 
     // return new Set(text.split('')).size !== text.length 

@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 4000;
 
+const test = require('./modules/duplicate-count');
 
+console.log(test('aabbbbaaac'))
 
 
 
