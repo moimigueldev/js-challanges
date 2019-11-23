@@ -18,7 +18,7 @@ function chunk(array, size) {
         }
         newArr.push(item)
     });
-
+ 
     interArr.push(newArr)
     return interArr;
 }

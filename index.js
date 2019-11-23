@@ -4,7 +4,6 @@ const port = 4000;
 
 const test = require('./modules/duplicate-count');
 
-console.log(test('aabbbbaaac'))
 
 
 
