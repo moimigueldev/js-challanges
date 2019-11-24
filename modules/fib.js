@@ -8,12 +8,47 @@
 // function fib, that takes one parameter steps, and returns a number from the Fibonacci sequence,
 // based on the parameter steps, which determines the position in Fibonacci number.
 // For example fib(0) returns 0, fib(4) returns 3, fib(15) returns 610.
-var stack = {};
-function fib(n){
-  if (n>1)
-    return stack[n] || ( stack[n] = fib(n-1)+fib(n-2) );
-  return n;
+// 
 
-  }
+function fib(n) {
+    
+  if (n < 2) {
+      return n;
+  } 
+
+  return fib(n - 1) + fib(n - 2)
+  
+}
 
 module.exports = fib;
+
+// ITERATIVE SOLUTION
+// function fib(n) {
+//     let result = [0, 1];
+
+//     for (let i = 2; i < n + 1 ; i++) {
+//         result.push(result[i - 1] + result[i - 2])
+//     }
+//    return result[result.length - 1]
+
+// }
+
+
+// RECURSIVE SOLUTION
+// function fib(n, index = 2, arr = [0 , 1]) {
+
+//     if (arr.length === n + 1) return arr[arr.length - 1];
+
+//     arr.push(arr[index - 1] + arr[index - 2])
+//     return fib(n, index + 1, arr)
+
+// }
+
+// SOLUTION ONE
+// var stack = {};
+// function fib(n){
+//   if (n>1)
+//     return stack[n] || ( stack[n] = fib(n-1)+fib(n-2) );
+//   return n;
+
+//   }
