@@ -2,25 +2,11 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/holiday-shopping');
+const test = require('./modules/black-jack-scorer');
 
 
-let queue = new test();
-
-console.log(queue.addGift({ gift: 'Water gun', priority: 1}))
-console.log(queue.addGift({ gift: '5', priority: 5}))
-console.log(queue.addGift({ gift: '2', priority: 2}))
-console.log(queue.addGift({ gift: '4', priority: 4}))
-console.log(queue.addGift({ gift: '3', priority: 3}))
-
-console.log('buying Gift', queue.buyGift())
-console.log('buying Gift', queue.buyGift())
-console.log('buying Gift', queue.buyGift())
-console.log('buying Gift', queue.buyGift())
-console.log('buying Gift', queue.buyGift())
-console.log('buying Gift', queue.buyGift())
-console.log('buying Gift', queue.buyGift())
-
+// console.log(test(["5", "4", "3", "2", "A", "K", 'A']));
+console.log(test(["A", "10", "A"]));
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
