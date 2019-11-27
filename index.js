@@ -2,7 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/black-jack-scorer');
+const test = require('./modules/generate-range');
+
+console.log(test(1, 10, 3))
 
 
 
