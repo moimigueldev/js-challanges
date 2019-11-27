@@ -5,8 +5,6 @@ const port = 4000;
 const test = require('./modules/black-jack-scorer');
 
 
-// console.log(test(["5", "4", "3", "2", "A", "K", 'A']));
-console.log(test(["A", "10", "A"]));
 
 app.get('/', async (req, res) => {
     console.log('Main Url hit');
