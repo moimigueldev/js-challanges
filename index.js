@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/meeting');
+const test = require('./modules/november/sort-arrays');
 
-console.log(test("Fred:Corwill;Wilfred:Corwill;Barney:Tornbull;Betty:Tornbull;Bjon:Tornbull;Raphael:Corwill;Alfred:Corwill"))
+console.log(test(["Hello", "there", "I'm", "fine"]))
 
 
 
