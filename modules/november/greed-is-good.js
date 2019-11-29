@@ -26,23 +26,19 @@ function score( dice ) {
     let results = 0; 
     let counter = 1;
 
-    dice = dice.join('')
+    dice = dice.join('');
 
-    
     while(counter <= 6) {
         let currentNum = dice.match(new RegExp(counter, 'g'));
+
         if(currentNum && currentNum.length >= 3) {
             if (counter === 1) {
                 results += 1000
-                for (let index = 0; index < 3 ; index++) {
-                    dice = dice.replace(counter, '')
-                }
+                dice = reduce(dice, counter)
                 break
             } else {
                 results += Number(`${counter}00`)
-                for (let index = 0; index < 3 ; index++) {
-                    dice = dice.replace(counter, '')
-                }
+                dice = reduce(dice, counter)
                 break
             }
         }
@@ -50,20 +46,19 @@ function score( dice ) {
     }
 
     for (el of dice) {
-        if (el === '1') {
-            results += 100
-        }
-
-        if (el === '5') {
-            results += 50;
-        }
+        if (el === '1') results += 100;
+        if  (el === '5') results += 50;
     }
 
-    // console.log('final', results)
-    // console.log('dice', dice)
-
     return results;
+}
 
+
+function reduce(dice, counter) {
+    for (let index = 0; index < 3 ; index++) {
+        dice = dice.replace(counter, '')
+    }
+    return dice
 }
 
 module.exports = score;
