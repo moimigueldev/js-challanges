@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/november/sort-arrays');
+const test = require('./modules/november/string-along');
 
-console.log(test(["Hello", "there", "I'm", "fine"]))
+console.log(test("Hello")("World!")("how")("are")("you?")())
 
 
 
