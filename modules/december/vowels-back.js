@@ -14,13 +14,13 @@ function vowelBack(s) {
     const vowels = 'aeiou'
     const alpha = 'abcdefghijklmnopqrstuvwxyz'
 
-    let newString = [...s].map((char, index, arr) => {
-        if (vowels.includes(char)) { // it is a vowel, move vowels back 5 places
-            // console.log(alpha.indexOf(char))
-        } else {
-            console.log(char)
-        }
-    })
+    // let newString = [...s].map((char, index, arr) => {
+    //     if (vowels.includes(char)) { // it is a vowel, move vowels back 5 places
+    //         // console.log(alpha.indexOf(char))
+    //     } else {
+    //         console.log(char)
+    //     }
+    // })
 }
 
 module.exports = vowelBack;
