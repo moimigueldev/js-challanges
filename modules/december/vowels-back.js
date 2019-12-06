@@ -7,6 +7,7 @@
 // Provided string will always be lower case, won't be empty and will have no special characters.
 
 // Test.assertSimilar(vowelBack("testcase"), "tabtbvba");
+// Test.assertSimilar(vowelBack("testcase"), "tabtbvba");
 
 
 
