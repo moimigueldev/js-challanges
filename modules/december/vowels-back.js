@@ -11,6 +11,9 @@
 
 // t moved forward 9 spaces is c
 
+// wgrgihevzcphxnyligez
+// fpapdqavibyqgwhudpai
+// fpapiqavibyqgwhuipai // what I sahould have
 // fpapiqavibyqgwhuipai
 
 const vowels = 'aeiou'
@@ -18,32 +21,23 @@ const alpha = 'abcdefghijklmnopqrstuvwxyz'
 const reverseAlpha = 'zyxwvutsrqponmlkjihgfedcba'
 
 function vowelBack(s) {
-
-    return [...s].map((char, index, arr) => {
-        if (vowels.includes(char)) { // it is a vowel, move vowels back 5 places
-
-            return vowel(char)
-        
-        } else { // consanents
-
-            return consonants(char)
-
-        }
-    }).join('');// end of new string
-
+    return [...s]
+    .map(char => vowels.includes(char) ? vowel(char) : consonants(char)).join('');
 
 }
 
 function revertToOriginal(original, char) {
-    let revert = 'code';
-    return revert.includes(char) ? original : char
+    return 'code'.includes(char) ? original : char
 }
 
 function vowel(char, numToMove) {
     let num = numToMove || specialCase(char, 5);
+
+  
+
     return alpha.indexOf(char) - num   < 0 ?
-    reverseAlpha[((alpha.indexOf(char) - num) + 1) * -1] :
-    alpha[(alpha.indexOf(char) - num)]
+    revertToOriginal(char, reverseAlpha[((alpha.indexOf(char) - num) + 1) * -1]) :
+    revertToOriginal(char, alpha[(alpha.indexOf(char) - num)])
 } 
 
 function consonants(char) {

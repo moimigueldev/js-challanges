@@ -4,10 +4,10 @@ const port = 4000;
 
 const test = require('./modules/december/vowels-back');
 
-console.log(test('wgrgihevzcphxnyligez'))
+console.log(test('codewars'))
 
-console.log('wgrgihevzcphxnyligez'.length)
-console.log('fpapdqavibyqgwhudpai'.length)
+// console.log('wgrgihevzcphxnyligez'.length)
+// console.log('fpapdqavibyqgwhudpai'.length)
 
 // fpapiqavibyqgwhuipai
 app.get('/', async (req, res) => {
