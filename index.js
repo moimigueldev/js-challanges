@@ -4,7 +4,7 @@ const port = 4000;
 
 const test = require('./modules/december/vowels-back');
 
-console.log(test('testcase'))
+console.log(test('testua'))
 
 
 app.get('/', async (req, res) => {
