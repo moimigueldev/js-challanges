@@ -16,60 +16,58 @@
 // fpapiqavibyqgwhuipai // what I sahould have
 // fpapiqavibyqgwhuipai
 
-const vowels = 'aeiou'
-const alpha = 'abcdefghijklmnopqrstuvwxyz'
-const reverseAlpha = 'zyxwvutsrqponmlkjihgfedcba'
+// const vowels = 'aeiou'
+// const alpha = 'abcdefghijklmnopqrstuvwxyz'
+// const reverseAlpha = 'zyxwvutsrqponmlkjihgfedcba'
 
-function vowelBack(s) {
-    return [...s]
-    .map(char => vowels.includes(char) ? vowel(char) : consonants(char)).join('');
+// function vowelBack(s) {
+//     return [...s]
+//     .map(char => vowels.includes(char) ? vowel(char) : consonants(char)).join('');
 
-}
+// }
 
-function revertToOriginal(original, char) {
-    return 'code'.includes(char) ? original : char
-}
+// function revertToOriginal(original, char) {
+//     return 'code'.includes(char) ? original : char
+// }
 
-function vowel(char, numToMove) {
-    let num = numToMove || specialCase(char, 5);
+// function vowel(char, numToMove) {
+//     let num = numToMove || specialCase(char, 5);
 
-  
+//     return alpha.indexOf(char) - num   < 0 ?
+//     revertToOriginal(char, reverseAlpha[((alpha.indexOf(char) - num) + 1) * -1]) :
+//     revertToOriginal(char, alpha[(alpha.indexOf(char) - num)])
+// } 
 
-    return alpha.indexOf(char) - num   < 0 ?
-    revertToOriginal(char, reverseAlpha[((alpha.indexOf(char) - num) + 1) * -1]) :
-    revertToOriginal(char, alpha[(alpha.indexOf(char) - num)])
-} 
+// function consonants(char) {
+//     let num = specialCase(char, 9)
 
-function consonants(char) {
-    let num = specialCase(char, 9)
+//     if(num !== 9) return vowel(char, num);
 
-    if(num !== 9) {
-        return vowel(char, num)
-    } else {
-        
-    let diff = (alpha.indexOf(char) + num) - alpha.length
-    return alpha.indexOf(char) + num >= alpha.length ? revertToOriginal(char, alpha[diff]):
-    revertToOriginal(char, alpha[alpha.indexOf(char) + num]) 
-    }
+//     let diff = (alpha.indexOf(char) + num) - alpha.length
 
-    
-    
-}
+//     return alpha.indexOf(char) + num >= alpha.length ? revertToOriginal(char, alpha[diff]):
+//     revertToOriginal(char, alpha[alpha.indexOf(char) + num])     
+// }
 
-function specialCase(char, num) {
-    switch(char) {
-        case 'e' :
-            
-            return 4
-        case 'c':
-            return 1
-        case 'o' :
-            return 1
-        case 'd' : 
-            return 3
-        default : 
-        return num
-    }
-}
+// function specialCase(char, num) {
+//     switch(char) {
+//         case 'e' :
+//             return 4
+//         case 'c':
+//             return 1
+//         case 'o' :
+//             return 1
+//         case 'd' : 
+//             return 3
+//         default : 
+//         return num
+//     }
+// }
+
+
+    abc = "abcdefghijklmnopqrstuvwxyz";
+key = "vkbaafpqistuvwnyzabtpvfghi";
+const vowelBack = s => s.split("").map(v=>key[abc.indexOf(v)]).join("");
+
 
 module.exports = vowelBack;
