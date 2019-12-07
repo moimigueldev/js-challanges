@@ -11,32 +11,26 @@
 
 // t moved forward 9 spaces is c
 
+// fpapiqavibyqgwhuipai
+
 const vowels = 'aeiou'
 const alpha = 'abcdefghijklmnopqrstuvwxyz'
 const reverseAlpha = 'zyxwvutsrqponmlkjihgfedcba'
 
 function vowelBack(s) {
 
-    let newString = [...s].map((char, index, arr) => {
+    return [...s].map((char, index, arr) => {
         if (vowels.includes(char)) { // it is a vowel, move vowels back 5 places
-            let num = 5;
 
-            // return vowel(char)
-            // return alpha.indexOf(char) - num   < 0 ?
-            // reverseAlpha[((alpha.indexOf(char) - num) + 1) * -1] :
-            // alpha[(alpha.indexOf(char) - num)]
+            return vowel(char)
         
         } else { // consanents
 
             return consonants(char)
-            // let num = 9
-            // let diff = (alpha.indexOf(char) + num) - alpha.length
-            // return alpha.indexOf(char) + num > alpha.length ? revertToOriginal(char, alpha[diff]):
-            // revertToOriginal(char, alpha[alpha.indexOf(char) + num]) 
+
         }
     }).join('');// end of new string
 
-    console.log('final', newString)
 
 }
 
@@ -46,24 +40,21 @@ function revertToOriginal(original, char) {
 }
 
 function vowel(char, numToMove) {
-    console.log('cowe', char, numToMove)
-    let num = 5;
-    // return alpha.indexOf(char) - num   < 0 ?
-    // reverseAlpha[((alpha.indexOf(char) - num) + 1) * -1] :
-    // alpha[(alpha.indexOf(char) - num)]
+    let num = numToMove || specialCase(char, 5);
+    return alpha.indexOf(char) - num   < 0 ?
+    reverseAlpha[((alpha.indexOf(char) - num) + 1) * -1] :
+    alpha[(alpha.indexOf(char) - num)]
 } 
 
 function consonants(char) {
     let num = specialCase(char, 9)
-    // let test = specialCase(char, 9)
-
 
     if(num !== 9) {
         return vowel(char, num)
     } else {
         
     let diff = (alpha.indexOf(char) + num) - alpha.length
-    return alpha.indexOf(char) + num > alpha.length ? revertToOriginal(char, alpha[diff]):
+    return alpha.indexOf(char) + num >= alpha.length ? revertToOriginal(char, alpha[diff]):
     revertToOriginal(char, alpha[alpha.indexOf(char) + num]) 
     }
 
@@ -72,8 +63,6 @@ function consonants(char) {
 }
 
 function specialCase(char, num) {
-    // console.log('char', char)
-    // If the character is 'c' or 'o', move it back 1 place. For 'd' move it back 3, and for 'e', move it back 4.
     switch(char) {
         case 'e' :
             
