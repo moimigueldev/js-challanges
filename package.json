@@ -1,0 +1,25 @@
+{
+  "name": "js-challanges",
+  "version": "1.0.0",
+  "description": "nodejs project full of javascript module challanges",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jasmine": "^3.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test-init" : "node ./node_modules/jasmine/bin/jasmine.js init",
+    "test": "nodemon ./node_modules/jasmine/bin/jasmine.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moimigueldev/js-challanges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moimigueldev/js-challanges/issues"
+  },
+  "homepage": "https://github.com/moimigueldev/js-challanges#readme"
+}
