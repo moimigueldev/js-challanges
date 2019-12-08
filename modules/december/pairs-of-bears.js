@@ -18,7 +18,6 @@
 function bears(x, s){
     s = s.match(/(8B|B8)/g) || [];
     return [s.join(''), s.length >= x]
-    
 }
 
 module.exports = bears
