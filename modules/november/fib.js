@@ -10,15 +10,15 @@
 // For example fib(0) returns 0, fib(4) returns 3, fib(15) returns 610.
 // 
 
-function fib(n) {
+// function fib(n) {
     
-  if (n < 2) {
-      return n;
-  } 
+//   if (n < 2) {
+//       return n;
+//   } 
 
-  return fib(n - 1) + fib(n - 2)
+//   return fib(n - 1) + fib(n - 2)
   
-}
+// }
 
 module.exports = fib;
 
@@ -45,10 +45,10 @@ module.exports = fib;
 // }
 
 // SOLUTION ONE
-// var stack = {};
-// function fib(n){
-//   if (n>1)
-//     return stack[n] || ( stack[n] = fib(n-1)+fib(n-2) );
-//   return n;
+var stack = {};
+function fib(n){
+  if (n>1)
+    return stack[n] || ( stack[n] = fib(n-1)+fib(n-2) );
+  return n;
 
-//   }
+  }
