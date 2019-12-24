@@ -17,22 +17,22 @@
 //   ),["2013.img5","2015.img3","2016.img1","2016.img2","2016.img4","2016.img5"]);
 
 function sortPhotos(pics) {
-  //Make room for an amazing photo!
-  pics = pics.sort();
+  var collator = new Intl.Collator(undefined, {
+    numeric: true,
+    sensitivity: 'base'
+  });
+
+  pics.sort(collator.compare);
   pics.splice(0, pics.length - 5);
 
-  const last = pics[pics.length - 1];
+  const lastWord = pics[pics.length - 1];
+  let lastInt = lastWord.substr(lastWord.lastIndexOf('g') + 1);
 
   pics.push(
-    last.substr(0, last.length - 1) + (Number(last[last.length - 1]) + 1)
+    lastWord.substr(0, lastWord.lastIndexOf('g') + 1) + (Number(lastInt) + 1)
   );
 
   return pics;
-
-  // let str = '2016.img4';
-  // console.log(
-  //   str.substr(0, str.length - 1) + (Number(str[str.length - 1]) + 1)
-  // );
 }
 
 module.exports = sortPhotos;
