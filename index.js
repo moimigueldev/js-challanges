@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/december/shortest-word');
+const test = require('./modules/december/expressions-matter');
 
-console.log(test('bitcoin take over the world maybe who knows perhaps'));
+// console.log(test(1, 2, 3));
+console.log(test(1, 1, 1));
 
 app.get('/', async (req, res) => {
   console.log('Main Url hit');
