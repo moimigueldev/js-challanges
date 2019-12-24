@@ -2,11 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/december/expressions-matter');
+const test = require('./modules/december/ten-min-walk');
 
-// console.log(test(1, 2, 3));
-// console.log(test(1, 1, 1));
-console.log(test(9, 7, 2));
+console.log(test(['n', 'n', 'n', 's', 'n', 's', 'n', 's', 'n', 's']));
 
 app.get('/', async (req, res) => {
   console.log('Main Url hit');
