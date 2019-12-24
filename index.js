@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/december/take-a-picture');
+const test = require('./modules/december/isograms');
+
+console.log(test('Dermatoglyphics'));
+console.log(test('aba'));
 
 app.get('/', async (req, res) => {
   console.log('Main Url hit');
