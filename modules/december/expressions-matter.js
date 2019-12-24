@@ -22,29 +22,60 @@
 // eval turns string equations to regular math equations
 
 function expressionMatter(a, b, c) {
-  let top = 0;
-
-  const expressions = [
-    'x * (x + x)',
-    'x * x * x',
-    'x + x * x',
-    '(x + x) * x',
-    'x + x + x'
-  ];
-
-  let values = [a, b, c];
-
-  for (let i = 0; i < expressions.length; i++) {
-    let current = expressions[i];
-
-    for (let j = 0; j < values.length; j++) {
-      current = current.replace(/x/, values[j]);
-    }
-
-    top = top < eval(current) ? eval(current) : top;
-  }
-
-  return top;
+  return Math.max(
+    a + b + c,
+    a * b * c,
+    a * (b + c),
+    (a + b) * c,
+    a + b * c,
+    a * b + c
+  );
 }
+
+// function expressionMatter(a, b, c) {
+//   const expressions = [
+//     'x * (x + x)',
+//     'x * x * x',
+//     'x + x * x',
+//     '(x + x) * x',
+//     'x + x + x'
+//   ];
+
+//   const values = [a, b, c];
+
+//   return expressions
+//     .map(x => {
+//       values.map(value => (x = x.replace(/x/, value)));
+//       return eval(x);
+//     })
+//     .sort((a, b) => a - b)
+//     .pop();
+// }
+
+// function expressionMatter(a, b, c) {
+//   let top = 0;
+
+//   const expressions = [
+//     'x * (x + x)',
+//     'x * x * x',
+//     'x + x * x',
+//     '(x + x) * x',
+//     'x + x + x'
+//   ];
+
+//   let values = [a, b, c];
+
+//   for (let i = 0; i < expressions.length; i++) {
+//     let current = expressions[i];
+
+//     for (let j = 0; j < values.length; j++) {
+//       current = current.replace(/x/, values[j]);
+//     }
+
+//     top = top < eval(current) ? eval(current) : top;
+//   }
+
+//   return top;
+// }
 
 module.exports = expressionMatter;

@@ -5,7 +5,8 @@ const port = 4000;
 const test = require('./modules/december/expressions-matter');
 
 // console.log(test(1, 2, 3));
-console.log(test(1, 1, 1));
+// console.log(test(1, 1, 1));
+console.log(test(9, 7, 2));
 
 app.get('/', async (req, res) => {
   console.log('Main Url hit');
