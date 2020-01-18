@@ -12,47 +12,11 @@
 
 
 function array_diff(a, b) {
-
-    
     if (!a.length) return [];
-    if(!b.length) return a
-
-
-
-    while(b.length) {
-        // console.log('a', a)
-        // console.log('incluides', a.includes(b[0]))
-        if(a.includes(b[0])) {
-            a.splice(a.indexOf(b[0]), 1)
-            
-        } else {
-            // console.log('deleteing', b[0])
-            b.shift()
-        }
- 
-    }
-
+    if (!b.length) return a
+    while (b.length) a.includes(b[0]) ? a.splice(a.indexOf(b[0]), 1) : b.shift()
     return a
-   
-   
 }
 
-
-// function array_diff(a, b) {
-
-//     if (!a.length) return [];
-//     if(!b.length) return a
-   
-
-//     b.forEach(el => {
-//         const reg = new RegExp(el, 'g')
-//         a = a.join('').replace(reg, '')
-//     });
-
-
-//     return a.split('').map(Number)
-   
-   
-// }
 
 module.exports = array_diff;
