@@ -4,7 +4,8 @@ const port = 4000;
 
 const test = require('./modules/january/digital-roots');
 
-console.log(test(942))
+console.log(test(493193))
+// console.log(test(942))
 
 
 
