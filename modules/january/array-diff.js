@@ -7,25 +7,52 @@
 
 // array_diff([1,2,2,2,3],[2]) == [1,3]
 
+// 19,-13,-7,-17,12,11,-16,18,15,-5,-14,-3,3,14,1,1,8,18,8,-19]
+// ,[11,8,19,-7]
+
 
 function array_diff(a, b) {
 
+    
     if (!a.length) return [];
     if(!b.length) return a
+
+
+
+    while(b.length) {
+        // console.log('a', a)
+        // console.log('incluides', a.includes(b[0]))
+        if(a.includes(b[0])) {
+            a.splice(a.indexOf(b[0]), 1)
+            
+        } else {
+            // console.log('deleteing', b[0])
+            b.shift()
+        }
+ 
+    }
+
+    return a
    
-
-    b.forEach(el => {
-        const reg = new RegExp(el, 'g')
-        a = a.join('').replace(reg, '')
-    });
-
-
-
    
-    console.log('final', a.split('').map(Number))
-    
-
-//   console.log(a.join('').replace(/2/g, '').split('').map(Number))
 }
+
+
+// function array_diff(a, b) {
+
+//     if (!a.length) return [];
+//     if(!b.length) return a
+   
+
+//     b.forEach(el => {
+//         const reg = new RegExp(el, 'g')
+//         a = a.join('').replace(reg, '')
+//     });
+
+
+//     return a.split('').map(Number)
+   
+   
+// }
 
 module.exports = array_diff;
