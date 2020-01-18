@@ -9,7 +9,23 @@
 
 
 function array_diff(a, b) {
-  
+
+    if (!a.length) return [];
+    if(!b.length) return a
+   
+
+    b.forEach(el => {
+        const reg = new RegExp(el, 'g')
+        a = a.join('').replace(reg, '')
+    });
+
+
+
+   
+    console.log('final', a.split('').map(Number))
+    
+
+//   console.log(a.join('').replace(/2/g, '').split('').map(Number))
 }
 
 module.exports = array_diff;
