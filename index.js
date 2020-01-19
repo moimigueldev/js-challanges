@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/january/digital-roots');
+const test = require('./modules/january/transform');
 
-console.log(test(493193))
-// console.log(test(942))
+s="\"Title\"\nDate class \n.\n.\n\"Connected\"\nfifo, \nisoYear, \ndaynum, \nargfirst, \nmonthend, \nweeknum, \nassoc.quantity, \nyearstart, \nrank, \ntoday."
 
+console.log(test(s))
 
 
 app.get('/', async (req, res) => {
