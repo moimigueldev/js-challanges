@@ -4,9 +4,7 @@ const port = 4000;
 
 const test = require('./modules/january/transform');
 
-s="\"Title\"\nDate class \n.\n.\n\"Connected\"\nfifo, \nisoYear, \ndaynum, \nargfirst, \nmonthend, \nweeknum, \nassoc.quantity, \nyearstart, \nrank, \ntoday."
 
-console.log(test(s))
 
 
 app.get('/', async (req, res) => {
