@@ -61,7 +61,7 @@ function transform(s) {
         if (el === '"Connected"') {
             first += `${el}\n`
             reachedConnected = true
-        } 
+        }
         else if (!reachedConnected) {
             first += `${el}\n`
         }
@@ -70,12 +70,12 @@ function transform(s) {
         }
     });
     last = last.sort()
-    last[last.length -1] = `${last[last.length - 1].split(',')[0]}.`
+    last[last.length - 1] = `${last[last.length - 1].split(',')[0]}.`
 
     last = last.map((el, index) => {
-        return  `${index + 1} ${el}`
+        return `${index + 1} ${el}`
     }).join('')
-    
+
 
     console.log(last)
     // console.log(last[last.length - 1].split(','))
