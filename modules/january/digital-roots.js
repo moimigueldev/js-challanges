@@ -32,18 +32,18 @@
 
 
 function digital_root(n) {
-    
+
     n = [...n.toString()]
 
     if (n.length === 1) return Number(n[0])
     let sum = 0;
 
     n.forEach(el => {
-        sum+= Number(el)
+        sum += Number(el)
     });
 
     return digital_root(sum)
-    
+
 }
 
 module.exports = digital_root;
