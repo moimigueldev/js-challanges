@@ -11,25 +11,29 @@
 // rowSumOddNumbers(1); // 1
 // rowSumOddNumbers(2); // 3 + 5 = 8
 
+// function rowSumOddNumbers(n) {
+//     let firstIndex = n * (n - 1) + 1;
+//     let result = [];
+//     let final = 0
+
+
+//     while (result.length !== n) {
+//         result.push(firstIndex)
+//         firstIndex = firstIndex + 2
+
+//     }
+
+//     for (let index = 0; index < result.length; index++) {
+//         final += result[index]
+//     }
+
+
+
+//     return final
+// }
+
 function rowSumOddNumbers(n) {
-    let firstIndex = n * (n - 1) + 1;
-    let result = [];
-    let final = 0
-
-
-    while (result.length !== n) {
-        result.push(firstIndex)
-        firstIndex = firstIndex + 2
-
-    }
-
-    for (let index = 0; index < result.length; index++) {
-        final += result[index]
-    }
-
-
-
-    return final
+    return Math.pow(n, 3)
 }
 
 module.exports = rowSumOddNumbers;
