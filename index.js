@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/january/transform');
+const test = require('./modules/january/odd-triangle');
+
+
+console.log(test(13))
 
 
 
@@ -13,3 +16,4 @@ app.get('/', async (req, res) => {
 });
 
 app.listen(port, () => console.log('app on port', port));
+
