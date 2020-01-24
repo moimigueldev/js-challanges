@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/january/sum-of-odd-triangle');
+const test = require('./modules/january/deadfish');
 
 
-console.log(test(2))
+console.log(test('iiisdoso'))
 
 
 
