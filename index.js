@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/january/stop-spinning-my-words');
+const test = require('./modules/january/interleaving-arrays');
 
 
-console.log(test("Hey fellow warriors"))
+console.log(test([1, 2, 3], ["c", "d", "e"]))
 
 
 
