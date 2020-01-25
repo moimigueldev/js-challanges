@@ -10,11 +10,10 @@
 
 function spinWords(s) {
     //TODO Have fun :)
-    let results = s.split(' ').map(el => {
-        return el.length >= 5 ? el.split('').reverse().join('') : el
-    }).join(' ')
+    return s.split(' ')
+        .map(el => el.length >= 5 ? el.split('').reverse().join('') : el)
+        .join(' ')
 
-    return results
 }
 
 module.exports = spinWords;
