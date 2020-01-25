@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/january/deadfish');
+const test = require('./modules/january/stop-spinning-my-words');
 
 
-console.log(test('iiisdoso'))
+console.log(test("Hey fellow warriors"))
 
 
 
