@@ -5,7 +5,6 @@ const port = 4000;
 const test = require('./modules/january/interleaving-arrays');
 
 
-console.log(test([1, 2, 3], ["c", "d", "e"]))
 
 
 
