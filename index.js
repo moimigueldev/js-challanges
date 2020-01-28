@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/january/interleaving-arrays');
+const test = require('./modules/january/strip-comments');
 
-
+console.log(test("apples, pears # and bananas\ngrapes\nbananas !apples", ["#", "!"]))
 
 
 
