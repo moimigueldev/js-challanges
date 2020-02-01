@@ -17,7 +17,7 @@ class Node {
 
     add(data) {
         this.children.push(new Node(data))
-    } 
+    }
 
     remove(data) {
         this.children = this.children.filter(node => {
@@ -34,17 +34,17 @@ class Tree {
     traverseBF(fn) { // left to right
         const arr = [this.root]
 
-        while(arr.length) {
+        while (arr.length) {
             const node = arr.shift();
             arr.push(...node.children)
             fn(node)
         }
     }
 
-    traverDF(fn) { 
+    traverDF(fn) {
         const arr = [this.root]
 
-        while(arr.length) {
+        while (arr.length) {
             const node = arr.shift();
             arr.unshift(...node.children)
             fn(node)
@@ -53,4 +53,3 @@ class Tree {
 }
 
 module.exports = { Tree, Node };
- 
