@@ -15,7 +15,19 @@
 // oddOneOut('Mama')          ===  ["M", "m"]
 
 function oddOneOut(str) {
-    // code me
+
+    let chars = new Set();
+
+    for (let c of str) {
+
+        if (chars.has(c))
+            chars.delete(c);
+        else
+            chars.add(c);
+        console.log(chars)
+    }
+
+
 }
 
 module.exports = oddOneOut;
