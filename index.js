@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/january/strip-comments');
+const test = require('./modules/february/odd-one-out');
 
+console.log(test('Hello World'))
 
 
 
