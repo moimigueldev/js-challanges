@@ -27,6 +27,7 @@ function oddOneOut(str) {
         console.log(chars)
     }
 
+    return Array.from(chars);
 
 }
 
