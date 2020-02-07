@@ -1,25 +1,66 @@
 from random import randrange
 
+
+
+
+choices = ['rock', 'paper', 'scissors']
 wins = 0
 draws = 0
 loses = 0
-isPlaying = 0
-userChoise = ''
-compChoise = ''
-choices = ['rock', 'paper', 'scissors']
 
 
-# wouldLikeToPlay = input("Would You like to play? Y/n > ")
 
 
 def game():
     compChoise = choices[randrange(3)]
     userChoise = choices[int(input("Choose: (1)Rock, (2)Paper, (3)Scissors > ")) - 1]
-    print('Playing the game', userChoise, compChoise)
+    
+    
+
+    print(f"Choices:", userChoise, compChoise)
+    
+    if (compChoise == userChoise): 
+        draws += 1
+        print('draw', draws)
+    elif (compChoise == 'rock' and userChoise == 'paper'):
+        wins += 1
+        print('user wins', wins)
+    elif (compChoise == 'paper' and userChoise == 'scissors'):
+        wins += 1
+        print('user wins', wins)
+    elif (compChoise == 'scissors' and userChoise == 'rock'):
+        wins += 1
+        print('user wins', wins)
+    else: 
+        loses += 1
+        print('computer wins', loses)
+
+    
+
+    
+def playAgain():
+    wouldLikeToPlay = input("Would You like to play? Y/n > ")
+    if (wouldLikeToPlay != 'y'):
+        print('Totla', wins)
+        return False
+    else:
+     return True
 
 
-game()
-# if (wouldLikeToPlay != 'y'):
-#     print("ok See you later")
-# else:
-#     game()
+def playGame():
+    isPlaying = True
+
+    while(isPlaying):
+        print('playing')
+        game()
+        isPlaying = playAgain()
+
+
+
+playGame()
+
+
+
+
+
+
