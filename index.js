@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-// const test = require('./modules/february/rock-paper-scissors');
+const test = require('./modules/february/complete-the-pattern');
 
-// console.log(test())
+console.log(test(5))
 
 
 
