@@ -4,7 +4,7 @@ const port = 4000;
 
 const test = require('./modules/february/complete-the-pattern');
 
-console.log(test(10))
+console.log(test(5))
 
 
 

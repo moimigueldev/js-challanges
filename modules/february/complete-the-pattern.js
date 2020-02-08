@@ -14,6 +14,8 @@
 // .....
 // nnnnnn
 
+
+
 function pattern(n) {
 
     let output = ''
@@ -25,5 +27,20 @@ function pattern(n) {
 
     return output;
 }
+
+// SECOND SOLUTION
+// function pattern(n) {
+
+//     if (n === 0) return ''
+
+//     return new Array(n).fill('').map((el, index) => {
+
+//         index += 1;
+//         return index === n ? `${index}`.repeat(index) : `${index}`.repeat(index) + '\n'
+
+//     }).join('')
+
+// }
+
 
 module.exports = pattern;
