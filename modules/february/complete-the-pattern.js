@@ -15,8 +15,14 @@
 // nnnnnn
 
 function pattern(n) {
-    var output = "";
-    // Happy Coding ^_^
+
+    let output = ''
+
+    for (let index = 1; index <= n; index++) {
+
+        output += index === n ? `${index}`.repeat(index) : `${index}`.repeat(index) + '\n'
+    }
+
     return output;
 }
 
