@@ -2,9 +2,13 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/february/complete-the-pattern');
+const test = require('./modules/february/pandemia');
 
-console.log(test(5))
+// console.log(test('XXXXX'))
+console.log(test('01X000X010X011XX'))
+// console.log(test('0000000'))
+
+// console.log(test('01000000X000X011X0X'))
 
 
 
