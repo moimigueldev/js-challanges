@@ -2,13 +2,12 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/february/pandemia');
+const test = require('./modules/february/men-boys');
 
-// console.log(test('XXXXX'))
-console.log(test('01X000X010X011XX'))
-// console.log(test('0000000'))
 
-// console.log(test('01000000X000X011X0X'))
+console.log(test([7, 3, 14, 17]))
+// console.log(test([49, 818, -282, 900, 928, 281, -282, -1]))
+
 
 
 
