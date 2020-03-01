@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/february/men-boys');
+const test = require('./modules/march/decoder');
 
 
-console.log(test([7, 3, 14, 17]))
-// console.log(test([49, 818, -282, 900, 928, 281, -282, -1]))
+console.log(test("pendisse potenti. Fusce finibus mollis nisl nec venenatisqsuSq.", 'q'))
+// console.log(test("Lor-.tile gnicsipida rutetcesnoc ,tema tis rolod muspi me", '-'))
 
 
 
