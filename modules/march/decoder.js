@@ -33,15 +33,6 @@ function decoder(encoded, marker) {
 }
 
 
-// function decoder(encoded, marker) {
-//     let str1 = encoded.substring(0, encoded.indexOf(marker))
-//     let str2 = encoded.substring(encoded.indexOf(marker) + 1).split(' ').reverse().map(el => {
-//         return el.split('').reverse().join('')
-//     }).join(' ')
-//     // console.log('marker', str1)
-//     // console.log('marker', str2)
 
-//     return `${str1}${str2}`
-// }
 
 module.exports = decoder;
