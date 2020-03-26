@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/march/num-of-digits');
+const test = require('./modules/march/capitalize');
 
-console.log(test(1))
+console.log(test('abcdef'))
 
 
 
