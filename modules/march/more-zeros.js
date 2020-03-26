@@ -23,17 +23,13 @@ function moreZeros(s) {
         let zeros = 0
         let ones = 0
 
-        if (e.match(/0/g) !== null) {
-            zeros = e.match(/0/g).length
-        }
-        if (e.match(/1/g) !== null) {
-            ones = e.match(/1/g).length
-        }
+        if (e.match(/0/g) !== null) zeros = e.match(/0/g).length
+        if (e.match(/1/g) !== null) ones = e.match(/1/g).length
 
         zeros > ones ? result.push(el) : null
     });
 
-    // console.log('110111'.match(/3/g))
+
 
     return result
 }
