@@ -8,35 +8,26 @@
 // EvenOdd([1,0,3]) => 3
 // EvenOdd([3,2])   => 6
 
-function evenOdd(arr, step = 1) {
+function EvenOdd(arr, step = 1) {
 
 
 
-    if (arr.length == 1) {
+    if (arr.length == 1) return arr[0]
 
-        return arr[0]
-    }
 
-    let a = arr.shift();
-    let b = arr.shift()
+
+    const a = arr.shift();
+    const b = arr.shift()
 
     if (step === 1) {
-        arr.unshift(mult(a, b))
-        return evenOdd(arr, step = 2)
+        arr.unshift(a * b)
+        return EvenOdd(arr, step = 2)
     } else {
-        arr.unshift(add(a, b))
-        return evenOdd(arr, step = 1)
+        arr.unshift(a + b)
+        return EvenOdd(arr, step = 1)
     }
 
+
 }
 
-function mult(a, b) {
-    return a * b
-    //going to return a number
-}
-function add(a, b) {
-    return a + b
-    //going to return a number
-}
-
-module.exports = evenOdd
+module.exports = EvenOdd
