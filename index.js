@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/march/decoder');
+const test = require('./modules/march/num-of-digits');
 
+console.log(test(1))
 
 
 
