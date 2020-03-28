@@ -5,30 +5,14 @@
 
 // For example, for the word "zodiacs", let's cross out the vowels. We get: "z o d ia cs"
 // /https://www.codewars.com/kata/59c633e7dcc4053512000073/train/javascript
+
+
+
 const alpha = 'abcdefghijklmnopqrstuvwxyz'
 const vowels = 'aeiou'
-// function solve(s) {
-
-
-
-
-
-//     s.split('').forEach((c, i) => {
-//         if (vowels.includes(c)) {
-//             s = s.split('')
-//             s[i] = 0
-//             s = s.join('')
-//         }
-//     });
-//     console.log('s', s)
-
-//     console.log('final', s.split('0'))
-// };
-
-
-
 function solve(s, stringsArr = []) {
     let max = 0
+
 
     if (!s.length) {
         stringsArr.forEach(c => {
@@ -37,20 +21,18 @@ function solve(s, stringsArr = []) {
                     max = alpha.indexOf(c) + 1
                 }
 
-            } else {
-                let counter = 0
-
-                c.split('').map(el => {
-                    counter += alpha.indexOf(el) + 1
-                })
-
-                max = counter >= max ? counter : max
             }
+
+            let counter = 0
+            c.split('').map(el => counter += alpha.indexOf(el) + 1)
+
+            max = counter >= max ? counter : max
+
 
         })
 
-        console.log('max', max)
-        return true
+
+        return max
     }
 
     let newString = ''
