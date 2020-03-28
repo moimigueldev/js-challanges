@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/march/consonants-value');
+const test = require('./modules/march/test-event');
 
-console.log(test('zodiacs'))
-// console.log(test('strength'))
+console.log(test(2))
+
 
 
 
