@@ -4,7 +4,7 @@ const port = 4000;
 
 const test = require('./modules/march/consonants-value');
 
-console.log(test('zodiacs'))
+// console.log(test('zodiacs'))
 console.log(test('strength'))
 
 
