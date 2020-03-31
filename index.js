@@ -4,7 +4,7 @@ const port = 4000;
 
 const test = require('./modules/march/greatest-product');
 
-console.log(test('123834539327238239583'))
+
 
 
 
