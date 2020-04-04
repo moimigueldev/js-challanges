@@ -5,6 +5,6 @@ const totalCost = 0
 document.getElementById('button').addEventListener('click', function () {
 
     console.log('total', mealCost.value * Number(`.${tipRange.value}`))
-    console.log(Number(`.${tipRange.value}`))
+    // console.log(Number(`.${tipRange.value}`))
 
 });
