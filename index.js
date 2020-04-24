@@ -4,7 +4,7 @@ const port = 4000;
 
 
 app.get('/', async (req, res) => {
-  console.log('Main Url hit');
+
   res.send('JS-Challange modules');
 });
 
