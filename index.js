@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/june/word')
+const test = require('./modules/june/sum')
 
-console.log(test('We often read book, a word hidden in the book.'))
+console.log(test(25))
 
 
 app.get('/', async (req, res) => {
