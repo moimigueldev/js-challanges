@@ -12,18 +12,10 @@ function halvingSum(n) {
     let count = 0;
 
     while (n >= 1) {
-
         n = n / 2
-
         count = Math.floor(n) + count;
-
-
-
     }
-
-
-
-    console.log('arr', count)
+    return count;
 }
 
 module.exports = halvingSum;
