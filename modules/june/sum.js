@@ -15,5 +15,4 @@ function halvingSum(n) {
     }
     return count;
 }
-
 module.exports = halvingSum;
