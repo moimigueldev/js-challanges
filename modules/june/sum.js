@@ -2,7 +2,6 @@
 // Given a positive integer n, calculate the following sum:
 // n + n/2 + n/4 + n/8 + ...
 
-
 function halvingSum(n) {
     const arr = [];
     let count = 0;
