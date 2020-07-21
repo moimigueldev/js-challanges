@@ -19,7 +19,7 @@ const e = require('express');
 // (the only-positive or only-negative integer may appear more than once)
 
 function solve(arr) {
-    return arr.filter(x => !arr.includes(x * -1))[0];
+    return arr.filter(x => !arr.includes(-x))[0];
 };
 
 module.exports = solve;
