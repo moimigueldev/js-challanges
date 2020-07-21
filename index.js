@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/july/fix-string-case')
+const test = require('./modules/july/fake-binary')
 
-// console.log('test', test('Code'))
-console.log('test', test('coDE'))
+console.log('test', test('45385593107843568'))
+
 
 
 app.get('/', async (req, res) => {

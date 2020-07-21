@@ -19,12 +19,12 @@
 // Simple remove duplicates
 
 function solve(s) {
-    let upperCase = 0;
-    let lowerCase = 0;
+        let upperCase = 0;
+        let lowerCase = 0;
 
-    for (const x of s) x == x.toUpperCase() ? upperCase++ : lowerCase++
+        for (const x of s) x == x.toUpperCase() ? upperCase++ : lowerCase++
 
-    return upperCase > lowerCase ? s.toUpperCase() : s.toLowerCase();
+        return upperCase > lowerCase ? s.toUpperCase() : s.toLowerCase();
 }
 
 module.exports = solve;
