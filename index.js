@@ -5,7 +5,7 @@ const port = 4000;
 const test = require('./modules/july/casino-chips')
 
 // console.log(test([4, 1, 1]))
-console.log(test([1, 2, 1]))
+// console.log(test([1, 2, 1]))
 // console.log(test([1, 1, 1]))
 
 
