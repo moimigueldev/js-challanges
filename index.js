@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/july/fake-binary')
+const test = require('./modules/july/remove-duplicates')
 
-console.log('test', test('45385593107843568'))
+console.log('test', test([3, 4, 4, 3, 6, 3]))
 
 
 
