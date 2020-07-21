@@ -2,10 +2,9 @@ const express = require('express');
 const app = express();
 const port = 4000;
 
-const test = require('./modules/july/array-parity')
+const test = require('./modules/july/short-long')
 
-console.log('test', test([-3, 1, 2, 3, -1, -4, -2]))
-// console.log('test', test([1, -1, 2, -2, 3]))
+console.log('test', test('22', '1'))
 
 
 app.get('/', async (req, res) => {
