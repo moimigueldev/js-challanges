@@ -2,10 +2,10 @@ const express = require("express");
 const app = express();
 const port = 4000;
 
-const test = require("./modules/july/ordered-count");
+const test = require("./modules/july/longest-vowel-chain");
 
 
-console.log("test", test('abracadabra'));
+console.log("test", test('codewarriors'));
 
 app.get("/", async (req, res) => {
   res.send("JS-Challange modules");
