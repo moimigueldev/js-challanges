@@ -5,7 +5,7 @@ const port = 4000;
 const test = require("./modules/july/longest-vowel-chain");
 
 
-console.log("test", test('codewarriors'));
+
 
 app.get("/", async (req, res) => {
   res.send("JS-Challange modules");
