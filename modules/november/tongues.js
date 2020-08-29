@@ -17,7 +17,7 @@
 // The function will be passed a string for the function to decode. 
 // Each string will contain up to 100 characters, representing some text written by Gandalf. 
 // All characters will be plain ASCII, in the range space (32) to tilde (126).
-// #Output
+// #Output 
 // For each string passed to the decode function return its translation.
 
 function tongues(code) {
