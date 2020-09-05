@@ -8,6 +8,7 @@ function dna(s) {
   let newString = '';
 
   for (let index = 0; index < s.length; index++) {
+  
     if(s[index] === 'a') {
         newString = newString + 't'
     }
